@@ -23,6 +23,6 @@ public class OrderListener {
     @JmsListener(destination = "${ibm.mq.queue}")
     public void receiveOrder(Order order) {
         logger.info("📥 Received Order: {}", order);
-        receivedOrdersQueue.offer(order);  // ✅ Place it in the shared queue
+        receivedOrdersQueue.offer(order);  //  Place it in the shared queue
     }
 }

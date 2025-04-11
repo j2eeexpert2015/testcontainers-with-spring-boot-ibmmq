@@ -26,7 +26,7 @@ public class OrderController {
     public ResponseEntity<String> sendOrder(@RequestBody Order order) {
         try {
             logger.info("Received request to send order via API: {}", order);
-            orderService.send(order); // Use the existing service to send [cite: uploaded:testcontainers-with-spring-boot-ibmmq/src/main/java/com/example/service/OrderService.java]
+            orderService.send(order);
             logger.info("Order successfully sent to MQ queue.");
             return ResponseEntity.ok("Order sent successfully: " + order.getId());
         } catch (Exception e) {

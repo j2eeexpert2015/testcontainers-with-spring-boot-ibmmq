@@ -29,7 +29,7 @@ public class OrderControllerIT {
     private TestRestTemplate restTemplate;
 
     @Test
-    void testSendValidOrder() {
+    void testSendOrder() {
         // Define target URL for the controller endpoint
         String url = "http://localhost:" + port + "/api/orders";
 
